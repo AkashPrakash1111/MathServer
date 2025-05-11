@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lamp Filament Power Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style type="text/css">
+        body {
+            background-color: #0d8d88f2;
+        }
+        .edge {
+            width: 100%;
+            padding-top: 180px;
+            text-align: center;
+        }
+        .box {
+            display: inline-block;
+            border: thick dashed #cd4f8e;
+            width: 500px;
+            min-height: 300px;
+            font-size: 20px;
+            background-color: rgb(67, 122, 204);
+        }
+        .formelt {
+            color: black;
+            text-align: center;
+            margin-top: 8px;
+            margin-bottom: 6px;
+        }
+        h1 {
+            color: black;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="edge">
+        <div class="box">
+            <h1>Lamp Filament Power Calculator</h1>
+            <h3>Akash Prakash (212224240008)</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="formelt">
+                    Intensity (I): <input type="text" name="intensity" value="{{ I }}"> A<br/>
+                </div>
+                <div class="formelt">
+                    Resistance (R): <input type="text" name="resistance" value="{{ R }}"> Ω<br/>
+                </div>
+                <div class="formelt">
+                    <input type="submit" value="Calculate"><br/>
+                </div>
+                <div class="formelt">
+                    Power (P): <input type="text" name="power" value="{{ P }}"> W<br/>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
